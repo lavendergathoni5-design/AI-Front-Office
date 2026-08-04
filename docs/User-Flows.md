@@ -58,8 +58,6 @@ Hello 👋
 
 Welcome to ABC Realty.
 
-I'm Virexa AI, your virtual assistant.
-
 I can help you:
 
 • Buy a property
