@@ -1,0 +1,325 @@
+# System Architecture
+
+Project: Virexa AI Front Office
+
+Version: 1.0 (MVP)
+
+---
+
+# Overview
+
+Virexa AI Front Office is an AI-powered customer communication and lead management platform for real estate agencies.
+
+The system receives customer inquiries, processes them using AI, searches company information, books appointments, stores customer data, and notifies human agents.
+
+---
+
+# High-Level Architecture
+
+Customer
+
+↓
+
+Website Chat Interface
+
+↓
+
+Backend API
+
+↓
+
+AI Engine
+
+↓
+
+Knowledge Base + Property Database
+
+↓
+
+Lead Management System
+
+↓
+
+Agent Dashboard
+
+↓
+
+Notifications
+
+---
+
+# Main Components
+
+## 1. Frontend
+
+Purpose:
+Provides interfaces for customers and agents.
+
+Components:
+
+- Customer chat widget
+- Agent dashboard
+- Admin dashboard
+- Property management page
+
+Technology:
+
+- Next.js
+- React
+- Tailwind CSS
+
+---
+
+## 2. Backend
+
+Purpose:
+Handles business logic and communication between systems.
+
+Responsibilities:
+
+- Authentication
+- API endpoints
+- Lead management
+- Property search
+- Appointment booking
+- Notifications
+
+Technology:
+
+- Python
+- FastAPI
+
+---
+
+## 3. AI Engine
+
+Purpose:
+Understand customer requests and generate responses.
+
+Responsibilities:
+
+- Intent detection
+- FAQ answering
+- Lead qualification
+- Conversation management
+- Escalation
+
+Technology:
+
+- OpenAI API
+- Prompt templates
+- Retrieval-Augmented Generation (RAG)
+
+---
+
+## 4. Knowledge Base
+
+Purpose:
+Provide verified information to the AI.
+
+Contains:
+
+- FAQs
+- Office information
+- Agent information
+- Policies
+- Buying guides
+- Rental guides
+
+Storage:
+
+- Vector database
+- Documents
+- PDFs
+
+---
+
+## 5. Property Database
+
+Stores:
+
+- Properties
+- Prices
+- Availability
+- Locations
+- Agents
+- Images
+
+Technology:
+
+- PostgreSQL
+
+---
+
+## 6. Lead Database
+
+Stores:
+
+- Name
+- Phone
+- Email
+- Budget
+- Property preference
+- Timeline
+- Lead score
+
+Technology:
+
+- PostgreSQL
+
+---
+
+## 7. Calendar System
+
+Purpose:
+
+Manage viewings.
+
+Functions:
+
+- Check availability
+- Book appointments
+- Reschedule appointments
+- Send reminders
+
+Future integrations:
+
+- Google Calendar
+- Outlook
+
+---
+
+## 8. Notifications
+
+Send:
+
+- New lead alerts
+- Appointment alerts
+- Customer requests
+
+Channels:
+
+- Email
+- SMS
+- WhatsApp (future)
+
+---
+
+## 9. Agent Dashboard
+
+Agents can:
+
+- View leads
+- View appointments
+- Review conversations
+- Manage properties
+- Follow up with customers
+
+---
+
+# Data Flow
+
+Customer sends message
+
+↓
+
+Frontend sends request
+
+↓
+
+Backend receives request
+
+↓
+
+AI processes request
+
+↓
+
+AI searches knowledge base
+
+↓
+
+AI searches property database
+
+↓
+
+AI generates response
+
+↓
+
+Backend stores conversation
+
+↓
+
+Customer receives answer
+
+↓
+
+Lead information saved
+
+↓
+
+Agent notified
+
+---
+
+# Security
+
+Requirements:
+
+- Secure login
+- Encrypted data
+- Role permissions
+- Audit logs
+
+Roles:
+
+- Customer
+- Agent
+- Manager
+- Admin
+
+---
+
+# Scalability
+
+The system should support:
+
+- Multiple agencies
+- Thousands of customers
+- Large property databases
+- Multiple AI assistants
+
+Future:
+
+Multi-tenant architecture
+
+---
+
+# Folder Structure
+
+virexa-ai-front-office/
+
+├── docs/
+├── frontend/
+├── backend/
+├── ai/
+├── database/
+├── tests/
+├── deployment/
+└── README.md
+
+---
+
+# Future Integrations
+
+- WhatsApp
+- Voice agent
+- CRM
+- Email automation
+- SMS
+- Analytics
+
+---
+
+# End of Document
